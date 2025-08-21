@@ -26,7 +26,7 @@ body {
 .header {
     grid-area: header;
    display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #000;
     border-bottom: 4px solid #e86f00;
@@ -37,7 +37,6 @@ body {
     max-width: 250px;
     /* Ajusta el tamaño del logo */
     height: auto;
-    margin-right: 30px;
 }
 
 nav ul {
