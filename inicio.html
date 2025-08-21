@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla</title>
+    <link rel="stylesheet" href="inicio.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Me gusta crearme una clase llamada contenedor, como si fuera el body,
+    el cual, siempre será fijo.-->
+    <div class="contenedor">
+
+        <!--El header también será una etiqueta fija. En ella siempre irá un logo
+        a la izquiera y el nombre a la derecha centrado.-->
+        <header class="header" role="banner">
+            <a href="inicio.html" class="brand">
+                <img src="Assets/Imagenes/Logo.png" alt="Logo del sitio Parafilias.com">
+            </a>
+            <h1 class="titulo">TRASTORNOS PARAFÍLICOS</h1>
+        </header>
+
+        <!--El nav también será una etiqueta fija, solo variarán los nombres
+        de los iconos según la web que se quiera hacer.-->
+        <nav class="nav">
+            <ul class="nav_lista">
+                <li class="lista_nav"><a href="inicio.html" class="menu">Inicio</a></li>
+                <li class="lista_nav"><a href="p_comunes.html" class="menu">Parafilias Comunes</a></li>
+                <li class="lista_nav"><a href="p_extrañas.html" class="menu">Parafilias Extrañas</a></li>
+                <li class="lista_nav"><a href="referencias.html" class="menu">Referencias</a></li>
+                <li class="lista_nav"><a href="contacto.html" class="menu">Contacto</a></li>
+            </ul>
+
+        </nav id="nav-principal" aria-label="Principal">
+        <!--El main también será fijo, además, en el apartado de Contacto,
+        es donde irá dicho formulario. Los datos de contacto pueden aparecer
+        o no, dependerá de la web.-->
+
+        <!-- Contenido principal -->
+        <main class="main" id="contenido" role="main">
+            <section class="contenido_principal" aria-labelledby="intro-titulo">
+                <h2 id="intro-titulo">Introducción a las Parafilias</h2>
+                <article>
+                    Según el <a href="DSM-V-TR.html" target="_blank" rel="noopener noreferrer"
+                        class="dsm5tr">DSM-5-TR</a> (Manual
+                    diagnóstico y estadístico de los trastornos mentales,
+                    quinta edición, texto revisado - Diagnostic and Statistical Manual of Mental Disorders,
+                    Fifth Edition, Text Revision), el término parafilia denota cualquier interés sexual intenso y
+                    persistente que no sea el interés sexual en la estimulación genital o caricias
+                    preparatorias con parejas humanas fenotípicamente normales, físicamente maduras y consentidas.
+                    También hay parafilias específicas que generalmente se describen mejor como
+                    intereses sexuales preferenciales que como intereses sexuales intensos.<br><br>
+                    En los criterios diagnósticos establecidos para cada uno de los trastornos
+                    parafílicos enumerados, el Criterio A especifica la naturaleza cualitativa de la
+                    parafilia (por ejemplo, un enfoque erótico en los niños o en exponer los genitales
+                    a extraños), y el Criterio B especifica las consecuencias negativas de la parafilia
+                    (es decir, angustia, deterioro o daño a otros). De acuerdo con la distinción entre
+                    algunas parafilias, las de Criterio A se refieren principalmente a las actividades eróticas del
+                    individuo y las del Criterio B se refieren principalmente a los objetivos eróticos del
+                    individuo.<br><br>
+                    Para una comprensión más clara, digamos que las parafilias son patrones de
+                    comportamiento sexual caracterizados por una intensa y persistente atención
+                    hacia objetos, situaciones o individuos atípicos.
+                    No todas las parafilias implican un trastorno, pero algunas pueden
+                    causar malestar significativo o dañar a otros si no se gestionan de forma
+                    adecuada.
+                </article>
+                <article>
+                    <h2>Diferencias entre Adicción al sexo y Parafilias</h2>
+                    <table border="1">
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>Adicción al sexo</th>
+                            <th>Parafilia</th>
+                        </tr>
+                        <tr>
+                            <th>Definición</th>
+                            <td>Búsqueda excesiva y compulsiva de actividad sexual, difícil de controlar.</td>
+                            <td>Excitación sexual intensa y persistente hacia objetos, situaciones o personas atípicas.
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Enfoque del problema</th>
+                            <td>Cantidad / control del impulso sexual.</td>
+                            <td>Contenido / tipo de estímulo sexual.</td>
+                        </tr>
+                        <tr>
+                            <th>Objeto del deseo</th>
+                            <td>Generalmente legal y consensuado (pornografía, masturbación, relaciones, cibersexo,
+                                etc.).</td>
+                            <td>Puede ser legal (fetichismo con consentimiento) o ilegal (pedofilia, zoofilia,
+                                voyeurismo sin
+                                consentimiento).</td>
+                        </tr>
+                        <tr>
+                            <th>Riesgos principales</th>
+                            <td>Impacto en la vida personal, laboral, relaciones y salud mental; pérdida de control.
+                            </td>
+                            <td>Daño potencial a otras personas si no es consensuado o es ilegal; consecuencias legales
+                                y éticas.</td>
+                        </tr>
+                        <tr>
+                            <th>Ejemplos</th>
+                            <td>Masturbarse compulsivamente, buscar sexo con múltiples parejas diarias, consumo excesivo
+                                de pornografía.
+                            </td>
+                            <td>Fetichismo, exhibicionismo, sadomasoquismo, pedofilia, frotteurismo, voyeurismo.</td>
+                        </tr>
+                        <tr>
+                            <th>Legalidad</th>
+                            <td>En sí misma no es delito, pero puede derivar en conductas ilegales si se pierde el
+                                control.</td>
+                            <td>Depende: algunas parafilias son legales y consensuadas, otras son delitos graves.</td>
+                        </tr>
+                        <tr>
+                            <th>Tratamiento</th>
+                            <td>Terapia cognitivo-conductual, terapia sexual, grupos de apoyo, medicación en algunos
+                                casos.</td>
+                            <td>Terapia especializada en control de impulsos y reestructuración del deseo; en casos
+                                ilegales, intervención
+                                legal y psicológica.</td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+            <!--El aside será fijo en mi proyecto final, pero en las plantillas generales, no tiene por qué estar.
+            Es eld contenido lateral -->
+        </main>
+        <aside class="contenido_secundario" aria-labelledby="sabias-que">
+            <h3 id="sabias-que">Sabías que...</h3>
+            <section aria-label="Curiosidades">
+                <article class="curiosidades">
+                    El término “parafilia” proviene del griego “para” (al margen de) y “philia”
+                    (amor o atracción).
+                </article>
+                <article class="curiosidades">
+                    Algo considerado parafílico en un país puede verse como común en otro.
+                </article>
+                <article class="curiosidades">
+                    Se dice que una de las razones por las que los caballeros de antaño regalaban flores en
+                    las citas, es porque pensaban que el aroma de ciertos tipos de flores provocaban,
+                    en quienes las recibían, una mejor predisposición al acercamiento.
+                </article>
+
+            </section>
+        </aside>
+
+        <!--El footer será fijo, aunque lo que incluya será variable.-->
+        <footer class="footer" role="contentinfo">
+            <span>© 2025 Parafilias.com</span>
+        </footer>
+    </div>
+</body>
+
+</html>
