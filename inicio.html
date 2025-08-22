@@ -4,49 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla</title>
+    <title>Inicio - Parafilias.com</title>
     <link rel="stylesheet" href="inicio.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--Me gusta crearme una clase llamada contenedor, como si fuera el body,
-    el cual, siempre será fijo.-->
     <div class="contenedor">
 
-        <!--El header también será una etiqueta fija. En ella siempre irá un logo
-        a la izquiera y el nombre a la derecha centrado.-->
+        <!-- HEADER -->
         <header class="header" role="banner">
-            <a href="inicio.html" class="brand">
+            <a href="inicio.html">
                 <img src="Assets/Imagenes/Logo.png" alt="Logo del sitio Parafilias.com">
             </a>
             <h1 class="titulo">TRASTORNOS PARAFÍLICOS</h1>
+
+            <!-- Buscador -->
+            <form class="buscador" role="search">
+                <label for="search" class="sr-only">Buscar</label>
+                <input type="search" id="search" name="q" placeholder="Buscar..." aria-label="Buscar en el sitio">
+                <button type="submit">🔍</button>
+            </form>
         </header>
 
-        <!--El nav también será una etiqueta fija, solo variarán los nombres
-        de los iconos según la web que se quiera hacer.-->
-        <nav class="nav">
-            <ul class="nav_lista">
-                <li class="lista_nav"><a href="inicio.html" class="menu">Inicio</a></li>
-                <li class="lista_nav"><a href="clasificacion.html" class="menu">Clasificación</a></li>
-                <li class="lista_nav"><a href="cultura.html" class="menu">Cultura</a></li>
-                <li class="lista_nav"><a href="recursos.html" class="menu">Recursos</a></li>
-                <li class="lista_nav"><a href="contacto.html" class="menu">Contacto</a></li>
+        <!-- NAV -->
+        <nav class="nav" id="nav-principal" aria-label="Principal">
+            <ul>
+                <li><a href="inicio.html" class="menu">Inicio</a></li>
+                <li><a href="clasificacion.html" class="menu">Clasificación</a></li>
+                <li><a href="cultura.html" class="menu">Cultura</a></li>
+                <li><a href="recursos.html" class="menu">Recursos</a></li>
+                <li><a href="contacto.html" class="menu">Contacto</a></li>
             </ul>
+        </nav>
 
-        </nav id="nav-principal" aria-label="Principal">
-        <!--El main también será fijo, además, en el apartado de Contacto,
-        es donde irá dicho formulario. Los datos de contacto pueden aparecer
-        o no, dependerá de la web.-->
-
-        <!-- Contenido principal -->
+        <!-- MAIN -->
         <main class="main" id="contenido" role="main">
             <section class="contenido_principal" aria-labelledby="intro-titulo">
                 <h2 id="intro-titulo">Bienvenidos a Parafilias.com</h2>
                 <section>
                     <article>
-                        <p>Las parafilias han sido históricamente un tema tabú, rodeado de prejuicios y
+                        <p>
+                            Las parafilias han sido históricamente un tema tabú, rodeado de prejuicios y
                             malinterpretaciones.
                             Sin embargo, más allá de los estigmas sociales, forman parte del ámbito de la salud mental y
                             merecen
@@ -58,16 +58,15 @@
                             han sido representadas en la cultura y la sociedad.<br><br>
 
                             Aquí encontrarás información libre de prejuicios, con un enfoque didáctico y acompañada de
-                            recursos
-                            basados en manuales diagnósticos, artículos especializados y otras referencias de
+                            recursos basados en manuales diagnósticos, artículos especializados y otras referencias de
                             interés.<br><br>
                         </p>
                     </article>
+
                     <article class="tabla_comparativa">
                         <h2>Diferencias entre Adicción al sexo y Parafilias</h2>
                         <p>Antes de profundizar en las distintas clasificaciones, es importante diferenciar entre dos
-                            conceptos
-                            que suelen confundirse: la adicción al sexo y las parafilias.
+                            conceptos que suelen confundirse: la adicción al sexo y las parafilias.
                         </p>
                         <table border="1">
                             <tr>
@@ -79,8 +78,7 @@
                                 <th>Definición</th>
                                 <td>Búsqueda excesiva y compulsiva de actividad sexual, difícil de controlar.</td>
                                 <td>Excitación sexual intensa y persistente hacia objetos, situaciones o personas
-                                    atípicas.
-                                </td>
+                                    atípicas.</td>
                             </tr>
                             <tr>
                                 <th>Enfoque del problema</th>
@@ -92,23 +90,19 @@
                                 <td>Generalmente legal y consensuado (pornografía, masturbación, relaciones, cibersexo,
                                     etc.).</td>
                                 <td>Puede ser legal (fetichismo con consentimiento) o ilegal (pedofilia, zoofilia,
-                                    voyeurismo sin
-                                    consentimiento).</td>
+                                    voyeurismo sin consentimiento).</td>
                             </tr>
                             <tr>
                                 <th>Riesgos principales</th>
                                 <td>Impacto en la vida personal, laboral, relaciones y salud mental; pérdida de control.
                                 </td>
                                 <td>Daño potencial a otras personas si no es consensuado o es ilegal; consecuencias
-                                    legales
-                                    y éticas.</td>
+                                    legales y éticas.</td>
                             </tr>
                             <tr>
                                 <th>Ejemplos</th>
                                 <td>Masturbarse compulsivamente, buscar sexo con múltiples parejas diarias, consumo
-                                    excesivo
-                                    de pornografía.
-                                </td>
+                                    excesivo de pornografía.</td>
                                 <td>Fetichismo, exhibicionismo, sadomasoquismo, pedofilia, frotteurismo, voyeurismo.
                                 </td>
                             </tr>
@@ -124,55 +118,50 @@
                                 <td>Terapia cognitivo-conductual, terapia sexual, grupos de apoyo, medicación en algunos
                                     casos.</td>
                                 <td>Terapia especializada en control de impulsos y reestructuración del deseo; en casos
-                                    ilegales, intervención
-                                    legal y psicológica.</td>
+                                    ilegales, intervención legal y psicológica.</td>
                             </tr>
                         </table>
                     </article>
+
                     <article>
                         <h2>Qué encontrarás en esta web:</h2>
                         <ul>
-
                             <li>Una clasificación completa de las parafilias por orden, categorías, frecuencia y tipo.
                             </li>
-
                             <li>Una sección cultural con ejemplos en libros, películas, series y documentales.</li>
-
                             <li>Recursos de consulta como manuales diagnósticos, artículos y enlaces externos.</li>
-
                             <li>Un espacio de contacto para enviar consultas o sugerencias.</li>
                         </ul>
                         <article>
-                            <h3 class="cierre_motivador">El objetivo de esta página es informar, visibilizar y abrir un espacio de conocimiento
-                                sin prejuicios. Explora el menú y descubre todo lo que hemos preparado para ti.
+                            <h3 class="cierre_motivador">
+                                El objetivo de esta página es informar, visibilizar y abrir un espacio de conocimiento
+                                sin prejuicios.<br><br> Explora el menú y descubre todo lo que hemos preparado para ti.
                             </h3>
                         </article>
+                    </article>
                 </section>
-                <!--El aside será fijo en mi proyecto final, pero en las plantillas generales, no tiene por qué estar.
-            Es eld contenido lateral -->
+            </section>
+
+            <!-- Botón volver arriba -->
+            <a href="#contenido" class="to-top" aria-label="Volver arriba">↑</a>
         </main>
+
+        <!-- ASIDE -->
         <aside class="contenido_secundario" aria-labelledby="sabias-que">
             <h3 id="sabias-que">Sabías que...</h3>
             <section aria-label="Curiosidades">
                 <article class="curiosidades">
-                    El término “parafilia” proviene del griego “para” (al margen de) y “philia”
-                    (amor o atracción).
                 </article>
-                <article class="curiosidades">
-                    Algo considerado parafílico en un país puede verse como común en otro.
-                </article>
-                <article class="curiosidades">
-                    Se dice que una de las razones por las que los caballeros de antaño regalaban flores en
-                    las citas, es porque pensaban que el aroma de ciertos tipos de flores provocaban,
-                    en quienes las recibían, una mejor predisposición al acercamiento.
-                </article>
-
             </section>
         </aside>
 
-        <!--El footer será fijo, aunque lo que incluya será variable.-->
-        <footer class="footer" role="contentinfo">
-            <span>© 2025 Parafilias.com</span>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>
+                © 2025 – Web de Parafilias. Todos los derechos reservados.<br>
+                Contenido informativo. No sustituye asesoramiento profesional.<br>
+                Informar para comprender, comprender para respetar.
+            </p>
         </footer>
     </div>
 </body>
