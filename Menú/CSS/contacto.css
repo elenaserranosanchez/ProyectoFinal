@@ -64,3 +64,16 @@ nav ul li a:hover {
     /* Un naranja un poco más claro al pasar el ratón */
 }
 
+/* ================================
+   FOOTER
+================================ */
+.footer {
+  grid-area: footer;
+  background-color: #E97800;
+  /* ← cámbialo por el código que prefieras */
+  color: #2B0B00;
+  /* color del texto */
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}

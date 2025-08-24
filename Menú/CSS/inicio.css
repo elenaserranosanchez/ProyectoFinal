@@ -25,6 +25,7 @@ body {
 ================================ */
 .contenedor {
   background-color: #0C0C0E;
+  border-top: 5px solid #E97800;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto;
@@ -83,28 +84,36 @@ body {
 }
 
 /* Buscador */
+/* ================================
+   BUSCADOR — Versión ligera/minimalista
+================================ */
 .buscador {
   grid-column: 1 / span 2;
   grid-row: 2;
-  justify-self: center;
+  justify-self: right;
   max-width: 320px;
   width: 100%;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, .08);
-  padding: 5px 10px;
-  border-radius: 999px;
-  margin: -68px 0px -15px 0px;
+  background-color: #1E1E1E;   /* gris carbón */
+  border: 1px solid #E97800;   /* amarillo cálido como acento */
+  color: #F4F4F4;              /* texto claro */
+  padding: 6px 12px;
+  border-radius: 25px;
+  margin: -68px 50px -15px 0px;
 }
 
 .buscador input {
-  flex: 1 1 auto;
-  min-width: 120px;
+  flex: 1;
   border: none;
   outline: none;
   background: transparent;
-  color: inherit;
-  font-size: 15px;
+  color: #F4F4F4;
+  font-size: 16px;
+}
+
+.buscador input::placeholder {
+  color: #AAAAAA;  /* gris suave */
 }
 
 .buscador button {
@@ -112,7 +121,8 @@ body {
   background: transparent;
   cursor: pointer;
   font-size: 16px;
-  color: inherit;
+  color: #FFD166;   /* amarillo cálido */
+  transition: color 0.3s ease;
 }
 
 .sr-only {
@@ -130,16 +140,30 @@ body {
 /* ================================
    NAV
 ================================ */
+/* ================================
+   NAV contenedor principal
+================================ */
 .nav {
   grid-area: nav;
   background-color: #E97800;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  position: relative;
+  z-index: 100;
+  /* encima del main */
 }
 
-nav ul {
+main,
+aside {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================
+   PRIMER NIVEL
+================================ */
+nav>ul {
   display: flex;
   gap: 50px;
   padding: 0;
@@ -147,7 +171,8 @@ nav ul {
   list-style: none;
 }
 
-nav li {
+nav ul li {
+  position: relative;
   list-style: none;
 }
 
@@ -166,10 +191,86 @@ nav li {
   color: #FFE7C2;
 }
 
-.menu:focus-visible {
-  outline: 3px solid #FFD166;
-  outline-offset: 3px;
+/* ================================
+   SUBMENÚS (aparición lenta sin efectos)
+================================ */
+nav ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #FFE7C2;
+  min-width: 240px;
+  padding: 8px 0;
+  border-radius: 6px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .18), 0 2px 6px rgba(0, 0, 0, .12);
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  /* baja un poquito */
+  transition:
+    opacity .5s ease,
+    /* un poco más lento */
+    transform .5s ease,
+    visibility 0s linear .5s;
+  pointer-events: none;
+}
+
+nav ul li:hover>ul,
+nav ul li:focus-within>ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:
+    opacity .5s ease,
+    transform .5s ease,
+    visibility 0s linear 0s;
+  pointer-events: auto;
+}
+
+.submenu {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #2B0B00;
+  font-size: 18px;
+  font-weight: 500;
   border-radius: 4px;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.submenu:hover {
+  background-color: #E97800;
+  color: #fff;
+}
+
+/* ================================
+   SUB-SUBMENÚS
+================================ */
+/* sub-submenú pegado al submenú, sin hueco */
+nav ul ul ul {
+  top: 0;
+  left: 100%;
+  margin-left: -1px;
+  /* pequeño solapamiento */
+}
+
+.sub-submenu {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #2B0B00;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+  transition: background-color .2s ease, color .2s ease;
+  white-space: nowrap;
+}
+
+.sub-submenu:hover {
+  background-color: #8E1E1E;
+  color: #fff;
 }
 
 /* ================================
@@ -196,8 +297,9 @@ nav li {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #AE0B07;
-  color: #fff;
+  background: #0C0C0E;   /* gris carbón */
+  border: 2px solid #E97800;
+  color: #E97800;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,27 +311,45 @@ nav li {
 }
 
 .main .to-top:hover {
-  opacity: 1;
+  background: #FFD166;
+  border: 2px solid #0C0C0E;
+  color: #0C0C0E;
 }
 
-/* Section izquierda */
+/* MAIN */
 .contenido_principal {
-  background-color: #5B101A;
+  background-color: #3D0A14;
+  /* granate oscuro profundo */
   color: #F4E6D5;
+  /* texto beige claro */
   padding: 16px 18px;
   border-radius: 8px;
   margin-left: 15px;
 }
 
-/* Aside derecha */
+/* ASIDE */
 .contenido_secundario {
   grid-area: aside;
-  background-color: #5B101A;
-  color: #F4E6D5;
+  background-color: #7A1C2F;
+  /* burdeos más vivo */
+  color: #FDEDE6;
+  /* texto claro */
   padding: 16px 18px;
   border-radius: 8px;
   margin-right: 15px;
 }
+
+/* Enlaces dentro del aside */
+.contenido_secundario a {
+  color: #FFD166;
+}
+
+/* amarillo cálido */
+.contenido_secundario a:hover {
+  color: #FFE7C2;
+}
+
+/* tono más suave */
 
 /* ================================
    FOOTER
@@ -240,41 +360,8 @@ nav li {
   /* ← cámbialo por el código que prefieras */
   color: #2B0B00;
   /* color del texto */
-  font-size: 17px;
+  font-size: 13px;
   font-weight: bold;
   text-align: center;
-}
-
-/* ================================
-   RESPONSIVE (todas al final)
-================================ */
-@media (max-width: 600px) {
-  .header {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    text-align: center;
-    justify-items: center;
-  }
-
-  .titulo {
-    font-size: 32px;
-    line-height: 36px;
-    white-space: normal;
-  }
-
-  .buscador {
-    justify-self: center;
-    max-width: none;
-    width: 100%;
-  }
-}
-
-@media (max-width: 500px) {
-  .main .to-top {
-    right: 10px;
-    bottom: 10px;
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
-  }
+  line-height: 1.8;
 }

@@ -11,8 +11,7 @@ body {
 .contenedor {
     background-color: black;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    /* main ocupa el doble de aside */
+    grid-template-columns: 2fr 1fr; /* main ocupa el doble de aside */
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header"
@@ -21,13 +20,12 @@ body {
     gap: 20px;
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 20px;
-    /* Para que nada se pegue al borde */
+    padding: 0 20px; /* Para que nada se pegue al borde */
 }
 
 .header {
     grid-area: header;
-    display: flex;
+   display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #000;
@@ -64,4 +62,18 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ff8c1a;
     /* Un naranja un poco más claro al pasar el ratón */
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+  grid-area: footer;
+  background-color: #E97800;
+  /* ← cámbialo por el código que prefieras */
+  color: #2B0B00;
+  /* color del texto */
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
 }

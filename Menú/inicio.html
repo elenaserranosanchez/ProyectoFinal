@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Parafilias.com</title>
-    <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="CSS/inicio.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 </head>
@@ -29,13 +29,66 @@
         </header>
 
         <!-- NAV -->
-        <nav class="nav" id="nav-principal" aria-label="Principal">
+        <nav class="nav" id="nav_principal" aria-label="Menú principal">
             <ul>
-                <li><a href="inicio.html" class="menu">Inicio</a></li>
-                <li><a href="clasificacion.html" class="menu">Clasificación</a></li>
-                <li><a href="cultura.html" class="menu">Cultura</a></li>
-                <li><a href="recursos.html" class="menu">Recursos</a></li>
-                <li><a href="contacto.html" class="menu">Contacto</a></li>
+                <li>
+                    <a href="inicio.html" class="menu" aria-current="page">Inicio</a>
+                </li>
+                <li>
+                    <a href="clasificacion.html" class="menu">Clasificación</a>
+                    <ul>
+                        <li><a href="clasificacion.html" class="submenu">Por orden alfabético</a></li>
+                        <li><a href="clasificacion.html" class="submenu">Por categorías</a>
+                            <ul>
+                                <li><a href="clasificacion.html" class="sub-submenu">Seres humanos</a></li>
+                                <li><a href="clasificacion.html" class="sub-submenu">Animales</a></li>
+                                <li><a href="clasificacion.html" class="sub-submenu">Objetos</a></li>
+                                <li><a href="clasificacion.html" class="sub-submenu">Situaciones/contextos</a></li>
+                                <li><a href="clasificacion.html" class="sub-submenu">Otros</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="clasificacion.html" class="submenu">Por frecuencia</a>
+                            <ul>
+                                <li><a href="clasificacion.html" class="sub-submenu">Comunes</a></li>
+                                <li><a href="clasificacion.html" class="sub-submenu">Extrañas/raras</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="clasificacion.html" class="submenu">Por tipos</a>
+                            <ul>
+                                <li><a href="clasificacion.html" class="sub-submenu">Específicas</a></li>
+                                <li><a href="clasificacion.html" class="sub-submenu">Inespecíficas</a></li>
+                                <li><a href="clasificacion.html" class="sub-submenu">Mixtas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="cultura.html" class="menu">Cultura</a>
+                    <ul>
+                        <li><a href="cultura.html" class="submenu">Libros</a></li>
+                        <li><a href="cultura.html" class="submenu">Películas</a></li>
+                        <li><a href="cultura.html" class="submenu">Series</a></li>
+                        <li><a href="cultura.html" class="submenu">Documentales</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recursos.html" class="menu">Recursos</a>
+                    <ul>
+                        <li><a href="recursos.html" class="submenu">Manuales</a></li>
+                        <li><a href="recursos.html" class="submenu">Artículos de referencia</a></li>
+                        <li><a href="recursos.html" class="submenu">Entrevistas destacadas</a></li>
+                        <li><a href="recursos.html" class="submenu">Contenido audiovisual</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contacto.html" class="menu">Contacto</a>
+                    <ul>
+                        <li><a href="contacto.html" class="submenu">Sobre mí</a></li>
+                        <li><a href="contacto.html" class="submenu">Formulario</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
@@ -143,7 +196,7 @@
             </section>
 
             <!-- Botón volver arriba -->
-            <a href="#contenido" class="to-top" aria-label="Volver arriba">↑</a>
+            <a href="#top" class="to-top" aria-label="Volver arriba">⬆</a>
         </main>
 
         <!-- ASIDE -->
